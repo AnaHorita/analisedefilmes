@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
+
+    <head>
+        <title>Cadastro de Filmes</title>  
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <link rel="stylesheet" th:href="@{/css/style.css}" /> 
+    </head> 
+    <body>
+        <h1>Cadastro de Filmes</h1> 
+                <form class="f" th:action="@{/gravar}" th:object="${filme}" method="POST"> 
+                  <p>Título: <input type="text" th:field=" ${filme.titulo}"/></p> 
+                  <p>Sinopse: <input type="text" th:field="${filme.sinopse}"/></p>  
+                <p>Gênero: <input type="text" th:field=" ${filme.genero}"/></p> 
+                  <p>Ano: <input type="text" th:field="${filme.ano}"/></p> 
+                <p><input type="submit" value="Cadastrar" /></p> 
+               </form> 
+
+        <a class ="b" th:href ="@{/}"><button type= "button"  class ="btn btn-dark">Voltar</button> </a>
+    </body>         
+
+</html>
